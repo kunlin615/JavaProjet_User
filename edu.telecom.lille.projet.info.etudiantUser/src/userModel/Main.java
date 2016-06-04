@@ -22,19 +22,20 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		final String file="usersDB.xml";
-		UserDB UC=new UserDB(file);
+		UserController UC=new UserController(file);
 		UC.loadDB();
-	//UC.addAdmin("su","KF",0001,"Kevin", "Flynn",  "@tron");
-	//	UC.addAdmin("su","K1",0002,"Keanu", "Reeves",  "redpill");
-	//	UC.addTeacher("su","GS",1001,"Grand", "Schtroumpf",  "salsepareille");
-	//	UC.addTeacher("su","MF",1002,"Morgan", "Freeman",  "iknowall");
-	//	UC.addStudent("su","BS",2001,"Buffy", "Summers",  "stake");
-	//	UC.addStudent("su","NL",2002,"Nicolas", "Lepetit",  "prout");
-		UC.addGroup("su", 100);
-		
-		UC.removeUser("su", "NL");
-		UC.assosiateStuToGroup("su", "BS", 100);
-		
+		UC.addAdmin("su","KF",0001,"Kevin", "Flynn",  "@tron");
+		UC.addAdmin("su","KR",0002,"Keanu", "Reeves",  "redpill");
+		UC.addTeacher("su","GS",1001,"Grand", "Schtroumpf",  "salsepareille");
+		UC.addTeacher("su","MF",1002,"Morgan", "Freeman",  "iknowall");
+		UC.addStudent("su","BS",2001,"Buffy", "Summers",  "stake");
+		UC.addStudent("su","NL",2002,"Nicolas", "Lepetit",  "prout");
+		UC.addStudent("su","WY",2003,"WANG", "YIFAN",  "WY9898");
+		UC.addGroup("su", 1);
+		UC.associateStudToGroup("su", "NL", 1);
+		UC.associateStudToGroup("su", "BS", 1);
+		UC.associateStudToGroup("su", "WY", 1);
+		System.out.println(UC.groupsToString().length);
 		UC.saveDB();
 	}
 }

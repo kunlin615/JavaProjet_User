@@ -11,7 +11,7 @@ import userModel.User;
 /**
  * Description of Teacher.
  * 
- * @author Cristain.L
+ * @author xubian
  */
 public class Teacher extends User {
 	/**
@@ -46,6 +46,7 @@ public class Teacher extends User {
 	/**
 	 * Sets a value to attribute teacherId. 
 	 * @param newTeacherId 
+	 * le nouveau ID de Teacher
 	 */
 	public void setTeacherId(Integer newTeacherId) {
 		this.teacherId = newTeacherId;

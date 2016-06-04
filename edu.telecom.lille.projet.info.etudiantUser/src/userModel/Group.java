@@ -12,7 +12,7 @@ import java.util.HashMap;
 /**
  * Description of Group.
  * 
- * @author Cristain.L
+ * @author xubian
  */
 public class Group {
 	/**
@@ -23,14 +23,12 @@ public class Group {
 	/**
 	 * Description of the property StudentList.
 	 */
-	//public EEList StudentList = null;
 	
-	HashMap<String ,Object> mapStudentOfGroup = new HashMap<String ,Object>();  
+	HashMap<String ,Object> mapStudent = new HashMap<String ,Object>();  
 
 	/**
 	 * Description of the property students.
 	 */
-	//public HashSet<Student> students = new HashSet<Student>();
 
 	/**
 	 * Description of the property StudentQuantity.
@@ -64,34 +62,11 @@ public class Group {
 	/**
 	 * Sets a value to attribute groupId. 
 	 * @param newGroupId 
+	 *    le nouveau ID de group
 	 */
 	public void setGroupId(Integer newGroupId) {
 		this.groupId = newGroupId;
 	}
-
-	/**
-	 * Returns StudentList.
-	 * @return StudentList 
-	 */
-	//public EEList getStudentList() {
-	//	return this.StudentList;
-	//}
-
-	/**
-	 * Sets a value to attribute StudentList. 
-	 * @param newStudentList 
-	 */
-	//public void setStudentList(EEList newStudentList) {
-	//	this.StudentList = newStudentList;
-	//}
-
-	/**
-	 * Returns students.
-	 * @return students 
-	 */
-	//public HashSet<Student> getStudents() {
-	//	return this.students;
-	//}
 
 	/**
 	 * Returns StudentQuantity.
@@ -104,6 +79,7 @@ public class Group {
 	/**
 	 * Sets a value to attribute StudentQuantity. 
 	 * @param newStudentQuantity 
+	 * la quantit¨¦ de Student
 	 */
 	public void setStudentQuantity(Integer newStudentQuantity) {
 		this.StudentQuantity = newStudentQuantity;

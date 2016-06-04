@@ -35,10 +35,10 @@ public class UserDB {
 	 */
 	private String file;
 
-public static	HashMap<String, Teacher> mapTeacher = new HashMap<String, Teacher>();
-public	HashMap<String, Admin> mapAdmin = new HashMap<String, Admin>();
-public	HashMap<String, Student> mapStudent = new HashMap<String, Student>();
-public	HashMap<Integer, Group> mapGroup = new HashMap<Integer, Group>();
+	public static HashMap<String, Teacher> mapTeacher = new HashMap<String, Teacher>();
+	public static HashMap<String, Admin> mapAdmin = new HashMap<String, Admin>();
+	public static HashMap<String, Student> mapStudent = new HashMap<String, Student>();
+	public static HashMap<Integer, Group> mapGroup = new HashMap<Integer, Group>();
 	Admin Su = new Admin();
 
 	/**
@@ -85,71 +85,159 @@ public	HashMap<Integer, Group> mapGroup = new HashMap<Integer, Group>();
 		this.file = file;
 	}
 
+	/**
+	 * Description of the method addAdmin.
+	 * 
+	 * @param adminLogin
+	 *            Le nom de Super Admin
+	 * @param newAdminlogin
+	 *            Le nouveau login de Admin
+	 * @param adminID
+	 *            le ID de Admin
+	 * @param firstname
+	 *            le nom de Admin
+	 * @param surname
+	 *            le prénom de Admin
+	 * @param pwd
+	 *            le mot de passe de Admin
+	 */
+
 	public void addAdmin(String adminLogin, String newAdminlogin, int adminID, String firstname, String surname,
 			String pwd) {
-		Admin admin = new Admin();
-		mapAdmin.get(adminLogin).createAdmin(admin, newAdminlogin, adminID, firstname, surname, pwd);
-		mapAdmin.put(newAdminlogin, admin);
+		if (mapAdmin.containsKey(adminLogin)) {
+			Admin admin = new Admin();
+			mapAdmin.get(adminLogin).createAdmin(admin, newAdminlogin, adminID, firstname, surname, pwd);
+			mapAdmin.put(newAdminlogin, admin);
+		}
 	}
 
+	/**
+	 * Description of the method addStudent.
+	 * 
+	 * @param adminLogin
+	 *            Le nom de Super Admin
+	 * @param newStudentlogin
+	 *            Le nouveau login de Student
+	 * @param StudentID
+	 *            le ID de Student
+	 * @param firstname
+	 *            le nom de Student
+	 * @param surname
+	 *            le prénom de Student
+	 * @param pwd
+	 *            le mot de passe de Student
+	 */
 	public void addStudent(String adminLogin, String newStudentlogin, int StudentID, String firstname, String surname,
 			String pwd) {
-		Student student = new Student();
-		mapAdmin.get(adminLogin).createStudent(student, newStudentlogin, StudentID, firstname, surname, pwd);
-		mapStudent.put(newStudentlogin, student);
+		if (mapAdmin.containsKey(adminLogin)) {
+			Student student = new Student();
+			mapAdmin.get(adminLogin).createStudent(student, newStudentlogin, StudentID, firstname, surname, pwd);
+			mapStudent.put(newStudentlogin, student);
+		}
 	}
+
+	/**
+	 * Description of the method addTeacher.
+	 * 
+	 * @param adminLogin
+	 *            Le nom de Super Admin
+	 * @param newteacherlogin
+	 *            Le nouveau login de Teacher
+	 * @param teacherID
+	 *            le ID de Teacher
+	 * @param firstname
+	 *            le nom de Teacher
+	 * @param surname
+	 *            le prénom de Teacher
+	 * @param pwd
+	 *            le mot de passe de Teacher
+	 */
 
 	public void addTeacher(String adminLogin, String newteacherlogin, int teacherID, String firstname, String surname,
 			String pwd) {
-		Teacher teacher = new Teacher();
-		mapAdmin.get(adminLogin).createTeacher(teacher, newteacherlogin, teacherID, firstname, surname, pwd);
-		mapTeacher.put(newteacherlogin, teacher);
+		if (mapAdmin.containsKey(adminLogin)) {
+			Teacher teacher = new Teacher();
+			mapAdmin.get(adminLogin).createTeacher(teacher, newteacherlogin, teacherID, firstname, surname, pwd);
+			mapTeacher.put(newteacherlogin, teacher);
+		}
 	}
 
+	/**
+	 * Description of the method addGroup.
+	 * 
+	 * @param adminLogin
+	 *            Le nom de Super Admin
+	 * @param groupID
+	 *            le ID de group
+	 */
+
 	public void addGroup(String adminLogin, int groupID) {
-		Group group = new Group();
-		mapAdmin.get(adminLogin).createGroup(group, groupID);
-		mapGroup.put(groupID, group);
+		if (mapAdmin.containsKey(adminLogin)) {
+			Group group = new Group();
+			mapAdmin.get(adminLogin).createGroup(group, groupID);
+			mapGroup.put(groupID, group);
+		}
 	}
+
+	/**
+	 * Description of the method addGroup.
+	 * 
+	 * @param adminLogin
+	 *            Le nom de Super Admin
+	 * @param groupId
+	 *            le ID de group
+	 * 
+	 * @param studentLogin
+	 *            le login de student
+	 */
+
+	public void assosiateStuToGroup(String adminLogin, int groupId, String studentLogin) {
+		if (mapGroup.containsKey(groupId) && mapStudent.containsKey(studentLogin)) {
+			mapStudent.get(studentLogin).setGroupId(groupId);
+			mapGroup.get(groupId).setStudentQuantity(mapGroup.get(groupId).getStudentQuantity() + 1);
+			mapGroup.get(groupId).mapStudent.put(studentLogin, mapStudent.get(studentLogin));
+		}
+	}
+
+	/**
+	 * Description of the method DeleteUser.
+	 * 
+	 * @param adminLogin
+	 *            Le nom de Super Admin
+	 * @param userLogin
+	 *            Le login de user
+	 */
 
 	public void removeUser(String adminLogin, String userLogin) {
 		// Start of user code for method DeleteUser
 		if (mapAdmin.containsKey(adminLogin)) {
-		mapStudent.remove(userLogin);
+			mapStudent.remove(userLogin);
 			mapTeacher.remove(userLogin);
 			mapAdmin.remove(userLogin);
 		}
-
+		// End of user code
 	}
-	
+
+	/**
+	 * Description of the method DeleteGroup.
+	 * 
+	 * @param adminLogin
+	 *            Le nom de Super Admin
+	 * @param groupId
+	 *            le ID de group
+	 */
+
 	public void removeGroup(String adminLogin, int groupId) {
-	// Start of user code for method DeleteGroup
-	if (mapAdmin.containsKey(adminLogin)) {
-
-		mapGroup.remove(groupId);
-
-	}
-
-}
-	
-	public void assosiateStuToGroup(String adminLogin, String studentLogin, int groupId) {
-	// Start of user code for method AssosiateStudent
-	if (mapAdmin.containsKey(adminLogin)) {
-		if (mapGroup.containsKey(groupId) && mapStudent.containsKey(studentLogin)) {
-			mapStudent.get(studentLogin).setGroupId(groupId);
-	// mapStudent.put(studentLogin,mapStudent.get(studentLogin));
-			
-			mapGroup.get(groupId).setStudentQuantity(mapGroup.get(groupId).getStudentQuantity() + 1);
-			mapGroup.get(groupId).mapStudentOfGroup.put(studentLogin, mapStudent.get(studentLogin));
-	
-
+		// Start of user code for method DeleteUser
+		if (mapAdmin.containsKey(adminLogin)) {
+			mapGroup.remove(groupId);
 		}
+		// End of user code
 	}
 
-	// End of user code
-}
-
-
+	/**
+	 * Description of the method loadDB.
+	 */
 
 	public void loadDB() {
 		org.jdom2.Document document = null;
@@ -166,7 +254,6 @@ public	HashMap<Integer, Group> mapGroup = new HashMap<Integer, Group>();
 
 		if (document != null) {
 			root = document.getRootElement();
-
 			groups = root.getChild("Groups");
 			List<Element> group = groups.getChildren("Group");
 			Iterator<Element> itGroup = group.iterator();
@@ -252,7 +339,6 @@ public	HashMap<Integer, Group> mapGroup = new HashMap<Integer, Group>();
 
 				Integer adminId = Integer.parseInt(unAdmin.getChild("adminId").getText());
 				Admin.setAdminId(adminId);
-
 				mapAdmin.put(adminLogin, Admin);
 			}
 
@@ -260,8 +346,11 @@ public	HashMap<Integer, Group> mapGroup = new HashMap<Integer, Group>();
 
 	}
 
-	public void saveDB() {
+	/**
+	 * Description of the method savedDB.
+	 */
 
+	public void saveDB() {
 		Element root = new Element("UsersDB");
 		org.jdom2.Document document = new Document(root);
 		Element Groups = new Element("Groups");

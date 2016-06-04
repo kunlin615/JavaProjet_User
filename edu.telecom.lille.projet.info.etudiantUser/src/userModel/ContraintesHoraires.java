@@ -10,7 +10,7 @@ package userModel;
 /**
  * Description of ContraintesHoraires.
  * 
- * @author Cristain.L
+ * @author xubian
  * @param <EDate>
  */
 public class ContraintesHoraires<EDate> {

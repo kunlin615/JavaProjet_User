@@ -10,7 +10,7 @@ package userModel;
 /**
  * Description of User.
  * 
- * @author Cristain.L
+ * @author xubian
  */
 public class User {
 	/**
@@ -51,15 +51,18 @@ public class User {
 	// End of user code
 	/**
 	 * Returns Login.
-	 * @return Login 
+	 * 
+	 * @return Login
 	 */
 	public String getLogin() {
 		return this.Login;
 	}
 
 	/**
-	 * Sets a value to attribute Login. 
-	 * @param newLogin 
+	 * Sets a value to attribute Login.
+	 * 
+	 * @param newLogin
+	 *            le nouveau login
 	 */
 	public void setLogin(String newLogin) {
 		this.Login = newLogin;
@@ -67,15 +70,18 @@ public class User {
 
 	/**
 	 * Returns Firstname.
-	 * @return Firstname 
+	 * 
+	 * @return Firstname
 	 */
 	public String getFirstname() {
 		return this.Firstname;
 	}
 
 	/**
-	 * Sets a value to attribute Firstname. 
-	 * @param newFirstname 
+	 * Sets a value to attribute Firstname.
+	 * 
+	 * @param newFirstname
+	 *            le nouveau nom
 	 */
 	public void setFirstname(String newFirstname) {
 		this.Firstname = newFirstname;
@@ -83,15 +89,18 @@ public class User {
 
 	/**
 	 * Returns Lastname.
-	 * @return Lastname 
+	 * 
+	 * @return Lastname
 	 */
 	public String getLastname() {
 		return this.Lastname;
 	}
 
 	/**
-	 * Sets a value to attribute Lastname. 
-	 * @param newLastname 
+	 * Sets a value to attribute Lastname.
+	 * 
+	 * @param newLastname
+	 *            le nouveau pr¨¦nom
 	 */
 	public void setLastname(String newLastname) {
 		this.Lastname = newLastname;
@@ -99,15 +108,18 @@ public class User {
 
 	/**
 	 * Returns Password.
-	 * @return Password 
+	 * 
+	 * @return Password
 	 */
 	public String getPassword() {
 		return this.Password;
 	}
 
 	/**
-	 * Sets a value to attribute Password. 
-	 * @param newPassword 
+	 * Sets a value to attribute Password.
+	 * 
+	 * @param newPassword
+	 *            Le mot de passe
 	 */
 	public void setPassword(String newPassword) {
 		this.Password = newPassword;

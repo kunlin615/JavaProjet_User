@@ -16,6 +16,14 @@
   </Rooms>
   <TimeTables>
     <TimeTable>
+      <GroupId>2009</GroupId>
+      <Books />
+    </TimeTable>
+    <TimeTable>
+      <GroupId>2016</GroupId>
+      <Books />
+    </TimeTable>
+    <TimeTable>
       <GroupId>1</GroupId>
       <Books>
         <Book>
@@ -47,6 +55,10 @@
           <RoomId>1</RoomId>
         </Book>
       </Books>
+    </TimeTable>
+    <TimeTable>
+      <GroupId>231</GroupId>
+      <Books />
     </TimeTable>
   </TimeTables>
 </TimeTablesDB>

@@ -11,7 +11,7 @@ import userModel.User;
 /**
  * Description of Student.
  * 
- * @author Cristain.L
+ * @author xubian
  */
 public class Student extends User {
 	/**
@@ -51,6 +51,7 @@ public class Student extends User {
 	/**
 	 * Sets a value to attribute studentId. 
 	 * @param newStudentId 
+	 *        le nouveau ID de student
 	 */
 	public void setStudentId(Integer newStudentId) {
 		this.studentId = newStudentId;
@@ -67,6 +68,7 @@ public class Student extends User {
 	/**
 	 * Sets a value to attribute groupId. 
 	 * @param newGroupId 
+	 * le nouveau ID de Group
 	 */
 	public void setGroupId(Integer newGroupId) {
 		this.groupId = newGroupId;

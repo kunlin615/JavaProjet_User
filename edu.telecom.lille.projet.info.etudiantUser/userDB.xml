@@ -2,7 +2,7 @@
 <UsersDB>
   <Groups>
     <Group>
-      <groupId>100</groupId>
+      <groupId>1</groupId>
     </Group>
   </Groups>
   <Students>
@@ -12,7 +12,23 @@
       <surename>Summers</surename>
       <pwd>stake</pwd>
       <studentId>2001</studentId>
-      <groupId>100</groupId>
+      <groupId>1</groupId>
+    </Student>
+    <Student>
+      <login>WY</login>
+      <firstname>WANG</firstname>
+      <surename>YIFAN</surename>
+      <pwd>WY9898</pwd>
+      <studentId>2003</studentId>
+      <groupId>1</groupId>
+    </Student>
+    <Student>
+      <login>NL</login>
+      <firstname>Nicolas</firstname>
+      <surename>Lepetit</surename>
+      <pwd>prout</pwd>
+      <studentId>2002</studentId>
+      <groupId>1</groupId>
     </Student>
   </Students>
   <Teachers>
@@ -40,7 +56,7 @@
       <adminId>0</adminId>
     </Administrator>
     <Administrator>
-      <login>K1</login>
+      <login>KR</login>
       <firstname>Keanu</firstname>
       <surename>Reeves</surename>
       <pwd>redpill</pwd>
