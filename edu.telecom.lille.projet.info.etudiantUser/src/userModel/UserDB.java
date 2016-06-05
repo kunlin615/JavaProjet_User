@@ -109,6 +109,7 @@ public class UserDB {
 			mapAdmin.get(adminLogin).createAdmin(admin, newAdminlogin, adminID, firstname, surname, pwd);
 			mapAdmin.put(newAdminlogin, admin);
 		}
+		saveDB();
 	}
 
 	/**
@@ -134,6 +135,7 @@ public class UserDB {
 			mapAdmin.get(adminLogin).createStudent(student, newStudentlogin, StudentID, firstname, surname, pwd);
 			mapStudent.put(newStudentlogin, student);
 		}
+		saveDB();
 	}
 
 	/**
@@ -160,6 +162,7 @@ public class UserDB {
 			mapAdmin.get(adminLogin).createTeacher(teacher, newteacherlogin, teacherID, firstname, surname, pwd);
 			mapTeacher.put(newteacherlogin, teacher);
 		}
+		saveDB();
 	}
 
 	/**
@@ -177,6 +180,7 @@ public class UserDB {
 			mapAdmin.get(adminLogin).createGroup(group, groupID);
 			mapGroup.put(groupID, group);
 		}
+		saveDB();
 	}
 
 	/**
@@ -197,6 +201,7 @@ public class UserDB {
 			mapGroup.get(groupId).setStudentQuantity(mapGroup.get(groupId).getStudentQuantity() + 1);
 			mapGroup.get(groupId).mapStudent.put(studentLogin, mapStudent.get(studentLogin));
 		}
+		saveDB();
 	}
 
 	/**
@@ -215,6 +220,7 @@ public class UserDB {
 			mapTeacher.remove(userLogin);
 			mapAdmin.remove(userLogin);
 		}
+		saveDB();
 		// End of user code
 	}
 
@@ -232,6 +238,7 @@ public class UserDB {
 		if (mapAdmin.containsKey(adminLogin)) {
 			mapGroup.remove(groupId);
 		}
+		saveDB();
 		// End of user code
 	}
 

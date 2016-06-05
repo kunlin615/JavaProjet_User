@@ -15,14 +15,6 @@
       <groupId>1</groupId>
     </Student>
     <Student>
-      <login>WY</login>
-      <firstname>WANG</firstname>
-      <surename>YIFAN</surename>
-      <pwd>WY9898</pwd>
-      <studentId>2003</studentId>
-      <groupId>1</groupId>
-    </Student>
-    <Student>
       <login>NL</login>
       <firstname>Nicolas</firstname>
       <surename>Lepetit</surename>
@@ -61,13 +53,6 @@
       <surename>Reeves</surename>
       <pwd>redpill</pwd>
       <adminId>2</adminId>
-    </Administrator>
-    <Administrator>
-      <login>KF</login>
-      <firstname>Kevin</firstname>
-      <surename>Flynn</surename>
-      <pwd>@tron</pwd>
-      <adminId>1</adminId>
     </Administrator>
   </Administrators>
 </UsersDB>

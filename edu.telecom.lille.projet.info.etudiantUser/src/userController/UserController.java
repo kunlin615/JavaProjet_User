@@ -223,7 +223,7 @@ public class UserController implements IUserController {
 			j++;
 		}
 		for (int k = 0; k < m; k++) {
-			group[i] = "GroupID" + String.valueOf(groupID[k]);
+			group[i] = "GroupID" +" "+String.valueOf(groupID[k]);
 			i++;
 			for (Entry<String, Student> entry : userDB.mapStudent.entrySet()) {
 				if (entry.getValue().groupId == groupID[k]) {

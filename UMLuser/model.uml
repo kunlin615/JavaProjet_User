@@ -68,6 +68,13 @@
       </ownedAttribute>
       <ownedOperation xmi:id="_EOwgIA4OEea0wN3m9VlUGQ" name="loadDB"/>
       <ownedOperation xmi:id="_GKFkYA4OEea0wN3m9VlUGQ" name="saveDB"/>
+      <ownedOperation xmi:id="_Ns67ICtDEeaw3MSooRGJ7w" name="addAdmin"/>
+      <ownedOperation xmi:id="_OCjz8CtDEeaw3MSooRGJ7w" name="addStudent"/>
+      <ownedOperation xmi:id="_ObVgUCtDEeaw3MSooRGJ7w" name="addTeacher"/>
+      <ownedOperation xmi:id="_OxZ28CtDEeaw3MSooRGJ7w" name="addGroup"/>
+      <ownedOperation xmi:id="_mxgSkCtGEeaw3MSooRGJ7w" name="assosiateStuToGroup"/>
+      <ownedOperation xmi:id="_nJwagCtGEeaw3MSooRGJ7w" name="removeUser"/>
+      <ownedOperation xmi:id="_p3LDACtGEeaw3MSooRGJ7w" name="removeGroup"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_TcRsMB0BEea6gdqLgLpTIA" name="User">
       <ownedAttribute xmi:id="_5SlKAB0BEea6gdqLgLpTIA" name="Login" visibility="public">
@@ -90,6 +97,12 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Kux7IR0CEea6gdqLgLpTIA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kux7Ih0CEea6gdqLgLpTIA" value="1"/>
       </ownedAttribute>
+      <ownedOperation xmi:id="_uVJ0wCtHEeaw3MSooRGJ7w" name="getFirstname()"/>
+      <ownedOperation xmi:id="_uueTsCtHEeaw3MSooRGJ7w" name="setFirstname"/>
+      <ownedOperation xmi:id="_vErNMCtHEeaw3MSooRGJ7w" name="getLastname"/>
+      <ownedOperation xmi:id="_1AsfsCtHEeaw3MSooRGJ7w" name="setLastname"/>
+      <ownedOperation xmi:id="_1X43sCtHEeaw3MSooRGJ7w" name="getPassword"/>
+      <ownedOperation xmi:id="_8hzgsCtHEeaw3MSooRGJ7w" name="setPassword"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_hzTmsB0CEea6gdqLgLpTIA" name="Admin">
       <generalization xmi:id="_0dsz0B0DEea6gdqLgLpTIA" general="_TcRsMB0BEea6gdqLgLpTIA"/>
@@ -98,13 +111,12 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YcDuAR0DEea6gdqLgLpTIA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YcDuAh0DEea6gdqLgLpTIA" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_DCFDQB0EEea6gdqLgLpTIA" name="CreateAdmin"/>
-      <ownedOperation xmi:id="_DpYT0B0EEea6gdqLgLpTIA" name="CreateStudent"/>
-      <ownedOperation xmi:id="_EBxlsB0EEea6gdqLgLpTIA" name="CreateTeacher"/>
-      <ownedOperation xmi:id="_CNbBQB0GEea6gdqLgLpTIA" name="CreateGroup"/>
-      <ownedOperation xmi:id="_EoBbcB0GEea6gdqLgLpTIA" name="AssosiateStudent"/>
-      <ownedOperation xmi:id="_FQRKYB0KEea6gdqLgLpTIA" name="DeleteUser"/>
-      <ownedOperation xmi:id="_Fo9-QB0KEea6gdqLgLpTIA" name="DeleteGroup"/>
+      <ownedOperation xmi:id="_DCFDQB0EEea6gdqLgLpTIA" name="createAdmin"/>
+      <ownedOperation xmi:id="_DpYT0B0EEea6gdqLgLpTIA" name="createStudent"/>
+      <ownedOperation xmi:id="_EBxlsB0EEea6gdqLgLpTIA" name="createTeacher"/>
+      <ownedOperation xmi:id="_CNbBQB0GEea6gdqLgLpTIA" name="createGroup"/>
+      <ownedOperation xmi:id="_l6ShQCtHEeaw3MSooRGJ7w" name="getAdminId"/>
+      <ownedOperation xmi:id="_mRybQCtHEeaw3MSooRGJ7w" name="setAdminId"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_iJDNMB0CEea6gdqLgLpTIA" name="Teacher">
       <generalization xmi:id="_16GgYB0DEea6gdqLgLpTIA" general="_TcRsMB0BEea6gdqLgLpTIA"/>
@@ -113,6 +125,8 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YxekYR0DEea6gdqLgLpTIA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YxekYh0DEea6gdqLgLpTIA" value="1"/>
       </ownedAttribute>
+      <ownedOperation xmi:id="_C-FnoCtIEeaw3MSooRGJ7w" name="getTeacherId"/>
+      <ownedOperation xmi:id="_DSTkICtIEeaw3MSooRGJ7w" name="setTeacherI"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_lDflEB0CEea6gdqLgLpTIA" name="Student">
       <generalization xmi:id="_2xwhIB0DEea6gdqLgLpTIA" general="_TcRsMB0BEea6gdqLgLpTIA"/>
@@ -126,6 +140,10 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9kjqoR0DEea6gdqLgLpTIA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9kjqoh0DEea6gdqLgLpTIA" value="1"/>
       </ownedAttribute>
+      <ownedOperation xmi:id="_JKzokCtIEeaw3MSooRGJ7w" name="getStudentId"/>
+      <ownedOperation xmi:id="_JaJFECtIEeaw3MSooRGJ7w" name="setStudentId"/>
+      <ownedOperation xmi:id="_Jrn2oCtIEeaw3MSooRGJ7w" name="getGroupId"/>
+      <ownedOperation xmi:id="_J8ouICtIEeaw3MSooRGJ7w" name="setGroupId"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_NrLeAB0GEea6gdqLgLpTIA" name="Group">
       <ownedAttribute xmi:id="_QpMHQB0GEea6gdqLgLpTIA" name="groupId" visibility="public">
@@ -138,21 +156,15 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q_gVgR0GEea6gdqLgLpTIA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q_gVgh0GEea6gdqLgLpTIA" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_qSNrsB0NEea6gdqLgLpTIA" name="StudentList" visibility="public">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EEList"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qSNrsR0NEea6gdqLgLpTIA" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qSNrsh0NEea6gdqLgLpTIA" value="1"/>
+      <ownedAttribute xmi:id="_UolTcCtIEeaw3MSooRGJ7w" name="mapStudent" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UonIoCtIEeaw3MSooRGJ7w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UonIoStIEeaw3MSooRGJ7w" value="1"/>
       </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_WlA9wB0MEea6gdqLgLpTIA" memberEnd="_WlA9wR0MEea6gdqLgLpTIA _WlA9xB0MEea6gdqLgLpTIA" navigableOwnedEnd="_WlA9xB0MEea6gdqLgLpTIA">
-      <ownedEnd xmi:id="_WlA9wR0MEea6gdqLgLpTIA" name="groups" type="_NrLeAB0GEea6gdqLgLpTIA" aggregation="composite" association="_WlA9wB0MEea6gdqLgLpTIA">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WlA9wh0MEea6gdqLgLpTIA" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WlA9wx0MEea6gdqLgLpTIA" value="1"/>
-      </ownedEnd>
-      <ownedEnd xmi:id="_WlA9xB0MEea6gdqLgLpTIA" name="students" type="_lDflEB0CEea6gdqLgLpTIA" association="_WlA9wB0MEea6gdqLgLpTIA">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WlA9xR0MEea6gdqLgLpTIA"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WlA9xh0MEea6gdqLgLpTIA" value="*"/>
-      </ownedEnd>
+      <ownedOperation xmi:id="_oK4OYCtIEeaw3MSooRGJ7w" name="getGroupId"/>
+      <ownedOperation xmi:id="_ob1bgCtIEeaw3MSooRGJ7w" name="setGroupId"/>
+      <ownedOperation xmi:id="_osAlgCtIEeaw3MSooRGJ7w" name="getStudentQuantity"/>
+      <ownedOperation xmi:id="_o-xJcCtIEeaw3MSooRGJ7w" name="setStudentQuantity"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_TVqQYB0NEea6gdqLgLpTIA" name="ContraintesHoraires">
       <ownedAttribute xmi:id="_lfQTAB0NEea6gdqLgLpTIA" name="teacherId" visibility="public">
@@ -183,7 +195,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_rcnz4B0OEea6gdqLgLpTIA" memberEnd="_rcnz4R0OEea6gdqLgLpTIA _rcnz5B0OEea6gdqLgLpTIA" navigableOwnedEnd="_rcnz5B0OEea6gdqLgLpTIA">
       <ownedEnd xmi:id="_rcnz4R0OEea6gdqLgLpTIA" name="userDBs" type="_7rGdAA4NEea0wN3m9VlUGQ" aggregation="composite" association="_rcnz4B0OEea6gdqLgLpTIA">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rcnz4h0OEea6gdqLgLpTIA"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rcnz4h0OEea6gdqLgLpTIA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rcnz4x0OEea6gdqLgLpTIA" value="1"/>
       </ownedEnd>
       <ownedEnd xmi:id="_rcnz5B0OEea6gdqLgLpTIA" name="users" type="_TcRsMB0BEea6gdqLgLpTIA" association="_rcnz4B0OEea6gdqLgLpTIA">
@@ -191,24 +203,24 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rcnz5h0OEea6gdqLgLpTIA" value="*"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bNj3ACG-EeaUePPAroK0Yw" memberEnd="_bN5OMCG-EeaUePPAroK0Yw _bOBxECG-EeaUePPAroK0Yw" navigableOwnedEnd="_bOBxECG-EeaUePPAroK0Yw">
-      <ownedEnd xmi:id="_bN5OMCG-EeaUePPAroK0Yw" name="userDBs" type="_7rGdAA4NEea0wN3m9VlUGQ" aggregation="composite" association="_bNj3ACG-EeaUePPAroK0Yw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bOAi8CG-EeaUePPAroK0Yw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bOBKACG-EeaUePPAroK0Yw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_66eL8CtGEeaw3MSooRGJ7w" memberEnd="_66ezACtGEeaw3MSooRGJ7w _66hPQStGEeaw3MSooRGJ7w" navigableOwnedEnd="_66hPQStGEeaw3MSooRGJ7w">
+      <ownedEnd xmi:id="_66ezACtGEeaw3MSooRGJ7w" name="userDBs" type="_7rGdAA4NEea0wN3m9VlUGQ" aggregation="composite" association="_66eL8CtGEeaw3MSooRGJ7w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_66goMCtGEeaw3MSooRGJ7w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_66hPQCtGEeaw3MSooRGJ7w" value="1"/>
       </ownedEnd>
-      <ownedEnd xmi:id="_bOBxECG-EeaUePPAroK0Yw" name="contraintesHorairess" type="_TVqQYB0NEea6gdqLgLpTIA" association="_bNj3ACG-EeaUePPAroK0Yw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bOC_MCG-EeaUePPAroK0Yw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bODmQCG-EeaUePPAroK0Yw" value="*"/>
+      <ownedEnd xmi:id="_66hPQStGEeaw3MSooRGJ7w" name="contraintesHorairess" type="_TVqQYB0NEea6gdqLgLpTIA" association="_66eL8CtGEeaw3MSooRGJ7w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_66idYCtGEeaw3MSooRGJ7w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_66jEcCtGEeaw3MSooRGJ7w" value="*"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_eGnu0CG-EeaUePPAroK0Yw" memberEnd="_eGoV4CG-EeaUePPAroK0Yw _eGqLESG-EeaUePPAroK0Yw" navigableOwnedEnd="_eGqLESG-EeaUePPAroK0Yw">
-      <ownedEnd xmi:id="_eGoV4CG-EeaUePPAroK0Yw" name="userDBs" type="_7rGdAA4NEea0wN3m9VlUGQ" aggregation="composite" association="_eGnu0CG-EeaUePPAroK0Yw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eGpkACG-EeaUePPAroK0Yw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eGqLECG-EeaUePPAroK0Yw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_MjJA4CtJEeaw3MSooRGJ7w" memberEnd="_MjJA4StJEeaw3MSooRGJ7w _MjMrQCtJEeaw3MSooRGJ7w" navigableOwnedEnd="_MjMrQCtJEeaw3MSooRGJ7w">
+      <ownedEnd xmi:id="_MjJA4StJEeaw3MSooRGJ7w" name="groups" type="_NrLeAB0GEea6gdqLgLpTIA" aggregation="composite" association="_MjJA4CtJEeaw3MSooRGJ7w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MjMEMCtJEeaw3MSooRGJ7w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MjMEMStJEeaw3MSooRGJ7w" value="1"/>
       </ownedEnd>
-      <ownedEnd xmi:id="_eGqLESG-EeaUePPAroK0Yw" name="groups" type="_NrLeAB0GEea6gdqLgLpTIA" association="_eGnu0CG-EeaUePPAroK0Yw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eGqyICG-EeaUePPAroK0Yw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eGrZMCG-EeaUePPAroK0Yw" value="*"/>
+      <ownedEnd xmi:id="_MjMrQCtJEeaw3MSooRGJ7w" name="students" type="_lDflEB0CEea6gdqLgLpTIA" association="_MjJA4CtJEeaw3MSooRGJ7w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MjPHgCtJEeaw3MSooRGJ7w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MjPHgStJEeaw3MSooRGJ7w" value="*"/>
       </ownedEnd>
     </packagedElement>
   </packagedElement>
@@ -217,18 +229,59 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_0n6zAvvWEeW-4OPaS2iZdg" name="UserController">
       <interfaceRealization xmi:id="_0n6zA_vWEeW-4OPaS2iZdg" client="_0n6zAvvWEeW-4OPaS2iZdg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_uIDuwA4NEea0wN3m9VlUGQ" name="IUserController"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_uIDuwA4NEea0wN3m9VlUGQ" name="IUserController">
+      <ownedOperation xmi:id="_ZCkOoCtMEeaw3MSooRGJ7w" name="removeGroup"/>
+      <ownedOperation xmi:id="_ZCkOoStMEeaw3MSooRGJ7w" name="addStudent"/>
+      <ownedOperation xmi:id="_ZCk1sCtMEeaw3MSooRGJ7w" name="associateStudToGroup"/>
+      <ownedOperation xmi:id="_ZCk1sStMEeaw3MSooRGJ7w" name="getUserDB"/>
+      <ownedOperation xmi:id="_ZCk1sitMEeaw3MSooRGJ7w" name="UserController"/>
+      <ownedOperation xmi:id="_ZCk1sytMEeaw3MSooRGJ7w" name="setUserDB"/>
+      <ownedOperation xmi:id="_ZCk1tCtMEeaw3MSooRGJ7w" name="saveDB"/>
+      <ownedOperation xmi:id="_ZCk1tStMEeaw3MSooRGJ7w" name="addTeacher"/>
+      <ownedOperation xmi:id="_ZCk1titMEeaw3MSooRGJ7w" name="studentsLoginToString"/>
+      <ownedOperation xmi:id="_ZCk1tytMEeaw3MSooRGJ7w" name="removeUser"/>
+      <ownedOperation xmi:id="_ZCk1uCtMEeaw3MSooRGJ7w" name="addGroup"/>
+      <ownedOperation xmi:id="_ZCk1uStMEeaw3MSooRGJ7w" name="getStudentGroup"/>
+      <ownedOperation xmi:id="_ZClcwCtMEeaw3MSooRGJ7w" name="getUserName"/>
+      <ownedOperation xmi:id="_ZClcwStMEeaw3MSooRGJ7w" name="getUserClass"/>
+      <ownedOperation xmi:id="_ZClcwitMEeaw3MSooRGJ7w" name="groupsToString"/>
+      <ownedOperation xmi:id="_ZClcwytMEeaw3MSooRGJ7w" name="loadDB"/>
+      <ownedOperation xmi:id="_ZClcxCtMEeaw3MSooRGJ7w" name="addAdmin"/>
+      <ownedOperation xmi:id="_ZClcxStMEeaw3MSooRGJ7w" name="groupsIdToString"/>
+      <ownedOperation xmi:id="_ZClcxitMEeaw3MSooRGJ7w" name="usersToString"/>
+      <ownedOperation xmi:id="_ZClcxytMEeaw3MSooRGJ7w" name="usersLoginToString"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_0j-CQA4NEea0wN3m9VlUGQ" name="UserController">
       <interfaceRealization xmi:id="_5mTTsA4NEea0wN3m9VlUGQ" client="_0j-CQA4NEea0wN3m9VlUGQ" supplier="_uIDuwA4NEea0wN3m9VlUGQ" contract="_uIDuwA4NEea0wN3m9VlUGQ"/>
+      <ownedOperation xmi:id="_Asg7sCtKEeaw3MSooRGJ7w" name="UserController"/>
+      <ownedOperation xmi:id="_A_gJICtKEeaw3MSooRGJ7w" name="getUserName"/>
+      <ownedOperation xmi:id="_BUaCICtKEeaw3MSooRGJ7w" name="getUserClass"/>
+      <ownedOperation xmi:id="_BlzUICtKEeaw3MSooRGJ7w" name="getStudentGroup"/>
+      <ownedOperation xmi:id="_CuW3oCtKEeaw3MSooRGJ7w" name="addAdmin"/>
+      <ownedOperation xmi:id="_DjOqICtKEeaw3MSooRGJ7w" name="addTeacher"/>
+      <ownedOperation xmi:id="_EWWJICtKEeaw3MSooRGJ7w" name="addStudent"/>
+      <ownedOperation xmi:id="_EtdBkCtKEeaw3MSooRGJ7w" name="removeUser"/>
+      <ownedOperation xmi:id="_FPkQICtKEeaw3MSooRGJ7w" name="addGroup"/>
+      <ownedOperation xmi:id="_Fmm3ICtKEeaw3MSooRGJ7w" name="removeGroup"/>
+      <ownedOperation xmi:id="_F6XgoCtKEeaw3MSooRGJ7w" name="usersLoginToString"/>
+      <ownedOperation xmi:id="_TRs4sCtLEeaw3MSooRGJ7w" name="associateStudToGroup"/>
+      <ownedOperation xmi:id="_TmdAsCtLEeaw3MSooRGJ7w" name="usersToString"/>
+      <ownedOperation xmi:id="_VDdKMCtLEeaw3MSooRGJ7w" name="studentsLoginToString"/>
+      <ownedOperation xmi:id="_VXmOMCtLEeaw3MSooRGJ7w" name="groupsIdToString"/>
+      <ownedOperation xmi:id="_VugSUCtLEeaw3MSooRGJ7w" name="groupsToString"/>
+      <ownedOperation xmi:id="_5SyDICtLEeaw3MSooRGJ7w" name="loadDB"/>
+      <ownedOperation xmi:id="_5sfjoCtLEeaw3MSooRGJ7w" name="saveDB"/>
+      <ownedOperation xmi:id="_6CFZICtLEeaw3MSooRGJ7w" name="getUserDB"/>
+      <ownedOperation xmi:id="_6TocICtLEeaw3MSooRGJ7w" name="setUserDB"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_QqIbsA4OEea0wN3m9VlUGQ" name="contains" memberEnd="_QqIbsQ4OEea0wN3m9VlUGQ _QqJp0A4OEea0wN3m9VlUGQ" navigableOwnedEnd="_QqJp0A4OEea0wN3m9VlUGQ">
-      <ownedEnd xmi:id="_QqIbsQ4OEea0wN3m9VlUGQ" name="userController" type="_0j-CQA4NEea0wN3m9VlUGQ" aggregation="composite" association="_QqIbsA4OEea0wN3m9VlUGQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QqJCwA4OEea0wN3m9VlUGQ" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QqJCwQ4OEea0wN3m9VlUGQ" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_qQ_CcCtMEeaw3MSooRGJ7w" memberEnd="_qQ_pgCtMEeaw3MSooRGJ7w _qRFwICtMEeaw3MSooRGJ7w" navigableOwnedEnd="_qRFwICtMEeaw3MSooRGJ7w">
+      <ownedEnd xmi:id="_qQ_pgCtMEeaw3MSooRGJ7w" name="userControllers" type="_0j-CQA4NEea0wN3m9VlUGQ" aggregation="composite" association="_qQ_CcCtMEeaw3MSooRGJ7w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qRD68CtMEeaw3MSooRGJ7w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qRFJECtMEeaw3MSooRGJ7w" value="1"/>
       </ownedEnd>
-      <ownedEnd xmi:id="_QqJp0A4OEea0wN3m9VlUGQ" name="userDB" type="_7rGdAA4NEea0wN3m9VlUGQ" association="_QqIbsA4OEea0wN3m9VlUGQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QqJp0Q4OEea0wN3m9VlUGQ" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QqJp0g4OEea0wN3m9VlUGQ" value="1"/>
+      <ownedEnd xmi:id="_qRFwICtMEeaw3MSooRGJ7w" name="userDBs" type="_7rGdAA4NEea0wN3m9VlUGQ" association="_qQ_CcCtMEeaw3MSooRGJ7w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qRKooCtMEeaw3MSooRGJ7w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qRLPsCtMEeaw3MSooRGJ7w" value="*"/>
       </ownedEnd>
     </packagedElement>
   </packagedElement>
